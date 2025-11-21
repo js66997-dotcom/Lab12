@@ -10,14 +10,19 @@
 public class Lab12Prob01 {
 	public static int recursiveAbstract(int input) {
 		// Recursion Function: f(n) = f(n-3) * (f(n-2)-(f(n-1))
-		if (input == 0) return 1;
-        if (input == 1) return 3;
-        if (input == 2) return 4;
-
-        return recursiveAbstract(input - 3) * (recursiveAbstract(input - 2) - recursiveAbstract(input - 1));
+		if (input == 0) {
+			return 1;
+		}else if (input == 1) {
+			return 3;
+		} else if (input == 2) {
+			return 4;
+		} else {
+			return recursiveAbstract(input - 3) * (recursiveAbstract(input - 2) - recursiveAbstract(input - 1));
+		}
 	}
 	
 	public static void main(String[] args) {
 		System.out.println(recursiveAbstract(0));
 	}
 }
+
